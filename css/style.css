@@ -1,0 +1,288 @@
+:root {
+  --primer: #b6895b;
+  --bg: #010101;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--bg);
+    color: white;
+    background-image: url('https://img.freepik.com/free-photo/top-view-delicious-coffee-beans-arrangement_23-2150691447.jpg?semt=ais_hybrid');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.register-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: var(--primer); /* Warna utama */
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #8c6946; /* Warna saat hover */
+    color: #fff;
+}
+
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 5%;
+    margin-top: 80px; /* Agar konten berada di bawah navbar */
+    background-color: rgba(0, 0, 0, 0.6); /* Latar belakang transparan untuk konten */
+    border-radius: 10px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: var(--primer); /* Warna utama */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #f2f2f2; /* Warna teks terang */
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Untuk responsif, atur layout kolom menjadi baris di layar lebih kecil */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color:  rgb(1, 1, 1, 0.8);
+    border-bottom: 1px solid #60482f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90909;
+}
+
+.navbar .navbar-logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+}
+
+.navbar .navbar-nav a{
+    color: white;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    
+}
+
+.navbar .navbar-nav a:hover{
+    color: var(--primer);
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primer);
+    transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-extra a{
+    color: white;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover{
+    color: var(--primer);
+}
+
+#menu{
+    display: none;
+}
+
+/* resolusi */
+/* Laptop */
+@media(max-width:1366px){
+    html{
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media(max-width:768px){
+    html{
+        font-size: 62.5%;
+    }
+    #menu{
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: white;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+    .navbar .navbar-nav.active{
+        right: 0;
+    }
+    .navbar .navbar-nav a{
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .navbar .navbar-nav a::after{
+        transform-origin:0 0 ;
+    }
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.2);
+        
+    }
+}
+
+/* Handphone */
+@media(max-width:450px){
+    html{
+        font-size: 55%;
+    }
+}
+
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.register-form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.register-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primer);
+}
+
+.register-form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.register-form input, .register-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-form input {
+    height: 40px;
+}
+
+.register-form textarea {
+    resize: none;
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primer);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #8c6946;
+}

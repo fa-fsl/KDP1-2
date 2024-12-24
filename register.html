@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Hubungkan dengan style.css -->
+</head>
+<body>
+
+    <!-- Navbar sama seperti di halaman utama -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Opet Coffee</a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <section id="register" class="register-section">
+        <div class="register-form">
+            <h2>Formulir Pendaftaran</h2>
+            <form action="crud.php" method="POST">
+              <label for="name">Nama Lengkap</label>
+              <input type="text" id="name" name="name" placeholder="Masukkan Nama Lengkap" required>
+          
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Masukkan Email" required>
+          
+              <label for="phone">Nomor Telepon</label>
+              <input type="tel" id="phone" name="phone" placeholder="Masukkan Nomor Telepon" required>
+          
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda di sini..."></textarea>
+          
+              <button type="submit" class="submit-btn">Daftar</button>
+          </form>
+          
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
